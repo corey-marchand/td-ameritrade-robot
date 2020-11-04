@@ -36,7 +36,7 @@ class Portfolio():
         else:
             raise TypeError("Positions must be a list of dictionaries")
     
-    def remove_positions(self, symbol: str) -> Tuple[bool, str]:
+    def remove_positions(self, symbol: str) -> tuple(bool, str):
         if symbol in self.positions:
             del self.positions[symbol]
 
