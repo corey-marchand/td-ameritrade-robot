@@ -1,8 +1,7 @@
 import pandas as pdb
 
 from td.client import TDClient
-from td.utils import milliseconds_since_epoch
-
+from td.utils import TDUtilities
 from datetime import datetime
 from datetime import time
 from datetime import timezone
@@ -14,7 +13,7 @@ from typing import Union
 class PyRobot():
     def __init__(self, client_id: str, redirect_uri: str, credentials_path: str = None, trading_account: str = None) -> None:
         self.trading_account: str = trading_account
-        self.client_id : str = client_id
+        self.client_id: str = client_id
         self.redirect_uri: str = redirect_uri
         self.credentials_path: str = credentials_path
         self.session: TDClient = self.create_session()
